@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav><img src="download.png" class="logo">
+               <ul id="sidemenu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <i class="fa-regular fa-circle-xmark" on click="closemenu()"></i>
+               </ul>
+               
+               <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Coder</p>
+                <h1>Hi, I'm <span>Harish</span> <br> Chand from India</h1>
+            </div>
+        </div>
+    </div>
+<!------------about------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="e.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p><!---add content----></p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">experience</p>
+                        <p class="tab-links" onclick="opentab('education')">education</p>
+                    
+                    </div>
+                    
+                        <div class="tab-cintents active-tab" id="skills"><ul>
+                            <li>
+                                <span>CODER</span><br> web developer interface
+                            </li>
+                            <li>
+                                <span>Languages</span><br>C<br>C++<br>Python                  
+                                      </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-cintents" id="experience"><ul>
+                        <li>
+                            <span>intern</span><br>intern with upskills in ML
+                        </li></ul>
+                </div>
+                <div class="tab-cintents" id="education"><ul>
+                    <li>
+                        <span>2022</span><br>Persuing btech cse  3rd sem
+                    </li></ul>
+            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------services------------->
+    <div id="services">
+        <script src="https://kit.fontawesome.com/6eed35911a.js"crossorigin="anonymous"></script>
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>web Design</h2>
+                    <p>using HTML,CSS,JS</p>
+                     <a href='#'>Learn More</a>
+                </div>
+                <div>
+                    <h2>coding</h2>
+                    <p>uisng C,C++,python</p>
+                     <a href='#'>Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!------------portfolio------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">
+                  My Work
+            </h1>
+            <div class="work-list active-link">
+                <div class="work">
+                    As i am a currently persuing btech so not any work done yet
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!---------contact me--------------->
+    <div id="contact">
+          <div class="container">
+             <div class="row">
+                 <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>   hchandrajwar@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>   8273961752</p>
+                    <div class="social-icon">
+                        <a href="https://fa-facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a><!---------cv--------------------------->
+                    </div>
+                 <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="your email" required>
+                        <textarea name="message" id="" cols="20" rows="30" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg">sucessfully sumitted</span>
+                 </div>
+             </div>
+          </div>
+          
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcintents=document.getElementsByClassName("tab-cintents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcintent of tabcintents){
+                tabcintent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+  
+</body>
+</html>
